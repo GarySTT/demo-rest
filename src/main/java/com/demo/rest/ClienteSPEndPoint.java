@@ -68,4 +68,11 @@ public class ClienteSPEndPoint {
         clienteSP.update(cliente);
         return Response.noContent().build();
     }
+
+    @DELETE
+    @Path("/{id:[0-9][0-9]*}")
+    public Response delete(@PathParam("id") Integer id, Cliente cliente) {
+        clienteSP.delte(cliente);
+        return Response.noContent().build();
+    }
 }

@@ -1,7 +1,6 @@
 package com.demo.controller;
 
 import com.demo.model.Cliente;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -54,6 +53,13 @@ public class ClienteSP {
                 .setParameter("SALDO", cliente.getSaldo())
                 .registerStoredProcedureParameter("TELEFONO", String.class, ParameterMode.IN)
                 .setParameter("TELEFONO", cliente.getTelefono());
+        query.execute();
+    }
+
+    public void delte(Cliente cliente) {
+        StoredProcedureQuery query = em.createStoredProcedureQuery("EliminarCliente")
+                .registerStoredProcedureParameter("ID_cliente", int.class, ParameterMode.IN)
+                .setParameter("ID_cliente", cliente.getId());
         query.execute();
 
     }
