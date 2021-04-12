@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <Resource id="jdbc/_demoRest" type="javax.sql.DataSource">#Wed Apr 07 12:22:04 CST 2021
+password=mysql
+jdbcDriver=com.mysql.cj.jdbc.Driver
+jdbcUrl=jdbc\:mysql\://localhost\:3306/CONTROL_CLIENTE
+userName=root
+</Resource>
+</resources>
